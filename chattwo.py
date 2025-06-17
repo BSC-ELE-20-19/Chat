@@ -23,7 +23,7 @@ def save_conversation(phone_number, messages):
 def chat(message):
     response = co.chat(
         model="command-a-03-2025", 
-        messages=[{"role": "user", "content": f"{message}: keep your response under 165 Characters and in Malawian context"}],
+        messages=[{"role": "user", "content": f"keep your response under 165 Characters, answer: {message}"}],
         max_tokens=160,
     )
     answer= response.message.content[0].text
