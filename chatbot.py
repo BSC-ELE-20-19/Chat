@@ -15,7 +15,7 @@ sms = africastalking.SMS
 def sending(question,phone_number):
     recipients = [f"{phone_number}"]
     message=chat(question)
-    sender = 35556
+    sender = 12425
 
     try:
         response = sms.send(message, recipients, sender)
